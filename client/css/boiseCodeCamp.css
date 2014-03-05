@@ -1,0 +1,11 @@
+/* CSS declarations go here */
+.meteor_logo {
+  float: left;
+  margin-right: 80px;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.title_header {
+  float: left;
+}

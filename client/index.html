@@ -1,0 +1,48 @@
+<head>
+  <title>Boise Code Camp Meteor.js</title>
+</head>
+
+<body>
+<div class="container">
+  {{> content}}
+</div>
+</body>
+
+<template name="content">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 well">
+      <div class="meteor_logo">
+        <img class="img-rounded" src="meteor.png" />
+      </div>
+      <div class="title_header">
+        <h1>Boise Code Camp Dev Connection</h1>
+        <h2>Sign in with Twitter to connect to other devs</h2>
+        {{#if currentUser}}<img class="img-circle" src="{{currentUser.services.twitter.profile_image_url}}"/>{{/if}} &nbsp; {{loginButtons}}
+      </div>
+  </div>
+    <table class="table">
+      {{#each users}}
+        {{> user}}
+      {{/each}}
+    </table>
+</div>
+</template>
+
+<template name="user">
+<tr>
+  <td style="width: 80px;">
+    <a target="_blank" href="http://twitter.com/{{services.twitter.screenName}}">
+      <img class="img-circle" src="{{services.twitter.profile_image_url}}"/>
+    </a>
+  </td>
+  <td style="padding-top: 23px; width: 150px;">
+    <a target="_blank" href="http://twitter.com/{{services.twitter.screenName}}">
+       {{profile.name}}
+    </a>
+  </td>
+  <td style="padding-top: 23px;">
+    <iframe style="width: 300px; height: 20px;" src="//platform.twitter.com/widgets/follow_button.html?screen_name={{services.twitter.screenName}}" height="240" width="320" frameborder="0" scrolling="no"></iframe>
+  </td>
+</tr>
+</template>
