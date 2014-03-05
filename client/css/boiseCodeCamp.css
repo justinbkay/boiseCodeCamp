@@ -9,3 +9,15 @@
 .title_header {
   float: left;
 }
+
+.profile_cell {
+  width: 80px;
+}
+
+.text_top_padding {
+  padding-top: 24px;
+}
+
+.twitter_name_cell {
+  width: 150px;
+}
