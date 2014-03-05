@@ -3,12 +3,9 @@
 </head>
 
 <body>
-<div class="container">
-  {{> content}}
-</div>
 </body>
 
-<template name="content">
+<template name="layout">
   <div class="container">
     <div class="row">
       <div class="col-md-12 well">
@@ -21,12 +18,30 @@
           {{#if currentUser}}<img class="img-circle" src="{{currentUser.services.twitter.profile_image_url}}"/>{{/if}} &nbsp; {{loginButtons}}
         </div>
     </div>
-    <table class="table">
-      {{#each users}}
-        {{> user}}
-      {{/each}}
-    </table>
+    {{yield}}
   </div>
+</template>
+
+<template name="home">
+  <table class="table">
+    {{#each users}}
+      {{> user}}
+    {{/each}}
+  </table>
+</template>
+
+<template name="profile">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input class="form-control" value="{{currentUser.profile.name}}" id="name" />
+  </div>
+  <div class="form-group">
+    <label for="name">Tagline</label>
+    <input class="form-control" value="{{currentUser.profile.tagline}}" id="tagline" style="size: 100" />
+  </div>
+  <p>
+    <button id="save" class="btn btn-primary">Save</button>
+  </p>
 </template>
 
 <template name="user">
@@ -41,8 +56,11 @@
          {{profile.name}}
       </a>
     </td>
-    <td class="text_top_padding">
+    <td class="text_top_padding twitter_follow_cell">
       <iframe style="width: 300px; height: 20px;" src="//platform.twitter.com/widgets/follow_button.html?screen_name={{services.twitter.screenName}}" height="240" width="320" frameborder="0" scrolling="no"></iframe>
+    </td>
+    <td class="text_top_padding">
+        {{profile.tagline}}
     </td>
   </tr>
 </template>
