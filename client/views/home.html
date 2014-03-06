@@ -1,9 +1,4 @@
 <template name="home">
-  {{#if currentUser}}
-    <button id="profile" type="button" style="position: relative; top: -70px; right: 30px;" class="pull-right btn btn-default btn-md">
-      <span class="glyphicon glyphicon-cog"></span> Profile
-    </button>
-  {{/if}}
   <table class="table">
     {{#each users}}
       {{> user}}

@@ -8,10 +8,32 @@
         <div class="title_header">
           <h1><img class="img-rounded" src="bcc.png" /> Boise Code Camp Dev Connection</h1>
           <h2>Sign in with Twitter to connect to other devs</h2>
-          {{#if currentUser}}<img class="img-circle" src="{{currentUser.services.twitter.profile_image_url}}"/>{{/if}} &nbsp; 
-          {{loginButtons}}
         </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-md-7">
+        
+      </div>
+      <div class="col-md-4">
+        {{yield 'userInfo'}}
+      </div>
+      <div class="col-md-1">
+        
+      </div>
+    </div>  
     {{yield}}
+  </div>
+</template>
+
+<template name="loggedInUser">
+  <div class="user_container">
+    {{#if currentUser}}<img class="img-circle user" src="{{currentUser.services.twitter.profile_image_url}}"/>{{/if}} &nbsp;
+    {{loginButtons}}
+    {{#if currentUser}}
+      <button id="profile" type="button" class="pull-right btn btn-default btn-md">
+        <span class="glyphicon glyphicon-cog"></span>
+      </button>
+    {{/if}}
   </div>
 </template>

@@ -17,7 +17,10 @@ Router.before(IR_BeforeHooks.isLoggedIn, {only: ['profile']});
 
 Router.map(function () {
     this.route('home', {
-      path: '/'
+      path: '/',
+      yieldTemplates: {
+            'loggedInUser': {to: 'userInfo'}
+          }
     });
 
     this.route('profile', {

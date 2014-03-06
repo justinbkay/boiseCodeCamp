@@ -25,3 +25,29 @@
 .twitter_follow_cell {
   width: 300px;
 }
+
+html, body {
+	background:url(stars.jpg) top right no-repeat; background-position:fixed;
+	background-color: #000;
+	height: 100%;
+}
+
+.container {
+	background-color: #FFF;
+	height: 100%;
+}
+
+#user_container {
+  padding: 5px; 
+  margin-top: -10px;
+}
+
+#profile {
+  position: relative;
+  top: 5px;
+}
+
+img.user {
+  position: relative; 
+  top: -8px;
+}
