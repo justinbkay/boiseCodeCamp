@@ -28,7 +28,7 @@
 
 <template name="loggedInUser">
   <div class="user_container">
-    {{#if currentUser}}<img class="img-circle user" src="{{currentUser.services.twitter.profile_image_url}}"/>{{/if}} &nbsp;
+    {{#if currentUser}}<img class="img-circle user" src="{{currentUser.services.twitter.profile_image_url}}"/> &nbsp;{{/if}}
     {{loginButtons}}
     {{#if currentUser}}
       <button id="profile" type="button" class="pull-right btn btn-default btn-md">
@@ -36,4 +36,12 @@
       </button>
     {{/if}}
   </div>
+</template>
+
+<template name="loading">
+  <h1>Loading</h1>
+</template>
+
+<template name="notFound">
+  <h1>Sorry I couldn't find that!</h1>
 </template>
