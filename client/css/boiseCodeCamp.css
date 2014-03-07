@@ -51,3 +51,12 @@ img.user {
   position: relative; 
   top: -8px;
 }
+
+.bg-danger {
+  padding: 3px;
+  color: red;
+  margin-top: 3px;
+  font-size: 1.4em;
+  display: none;
+}
+

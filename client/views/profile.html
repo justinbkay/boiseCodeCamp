@@ -1,7 +1,8 @@
 <template name="profile">
-  <div class="form-group">
+  <div id="name_group" class="form-group">
     <label for="name">Name</label>
     <input class="form-control" value="{{currentUser.profile.name}}" id="name" />
+    <p class="bg-danger" id="name_error">Name is a required field</p>
   </div>
   <div class="form-group">
     <label for="name">Tagline</label>
