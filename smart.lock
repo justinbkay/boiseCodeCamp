@@ -3,18 +3,24 @@
   "dependencies": {
     "basePackages": {
       "bootstrap-3": {},
-      "accounts-entry": {}
+      "accounts-entry": {},
+      "connection-banner": {}
     },
     "packages": {
       "bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
-        "tag": "v3.1.0-1",
-        "commit": "329dccb08bfc18c635676dea600ac9953162cda9"
+        "tag": "v3.1.1-1",
+        "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
       },
       "accounts-entry": {
         "git": "https://github.com/BeDifferential/accounts-entry.git",
         "tag": "v0.6.2",
         "commit": "56c9b6c064cc0d92a97aa9b53a8f4da050f54c29"
+      },
+      "connection-banner": {
+        "git": "https://github.com/nate-strauser/meteor-connection-banner.git",
+        "tag": "v0.2.1",
+        "commit": "aeb866f75e626262a97e9c913ac7dd5425e5c118"
       },
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
