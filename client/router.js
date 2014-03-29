@@ -13,7 +13,7 @@ Router.configure({
     notFoundTemplate: 'notFound'
 });
 
-Router.before(IR_BeforeHooks.isLoggedIn, {only: ['profile']});
+Router.onBeforeAction(IR_BeforeHooks.isLoggedIn, {only: ['profile']});
 
 Router.map(function () {
     this.route('home', {
