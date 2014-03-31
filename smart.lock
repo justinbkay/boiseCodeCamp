@@ -14,8 +14,8 @@
       },
       "accounts-entry": {
         "git": "https://github.com/Differential/accounts-entry.git",
-        "tag": "v0.7.0",
-        "commit": "7fb0e8e745852feb441661285207302bfa1e8441"
+        "tag": "v0.7.1",
+        "commit": "7d6b92335f4c6e730c383324e5d340b3a241cad3"
       },
       "connection-banner": {
         "git": "https://github.com/nate-strauser/meteor-connection-banner.git",
